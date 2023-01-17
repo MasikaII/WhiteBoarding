@@ -1,0 +1,45 @@
+1. Determine work flow
+2. Know what to do
+3. How we are doing it
+
+IDEA - Information System in Agriculture
+	Deliverables:
+		- A web embedded
+		- Embeds a search engine
+		- Delivers very specific information and offers suggestions
+		Searches: - Powered By AI
+		          - Filteration and specification
+		          - Open ended
+		
+	How To Do:
+
+
+
+User perspective:
+a) Login/Sign Up page
+b) Layout - 
+	Homepage - menu on the left
+			 - Section allows to post - includes (images, ...)
+			 - menu : profile, notifcations
+			 - search area
+
+Timeframe:
+Search functionality:
+a) build a model
+	- Ability to give specific information and provide meaningful
+	- Machine Learning Using Big Data - Apache Spark
+	
+-Two days:
+a) wireframes and workflows
+b) start on the model
+
+
+		  
+		  
+		  
+		  
+		  
+
+
+
+https://www.figma.com/team_invite/redeem/KRgRgh7gPw496gcpbehegJ
