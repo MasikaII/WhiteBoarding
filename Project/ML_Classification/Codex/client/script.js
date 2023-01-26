@@ -66,3 +66,37 @@ function chatStripe(isAI, value, uniqueId) {
 }
 
 // function that acts as trigger to obtain the AI generated response
+// async function that takes event as the only parameter
+const handleSubmit = async (e) => {
+  e.preventDefault(); // prevents browser from reloading when form is submitted
+
+  // getting data entered in the form
+  const data = new FormData(form);
+
+  // user's chat stripe
+  chatContainer.innerHTML += chatStripe(false, data.get('prompt'));
+
+  // clearing text area
+  form.reset();
+
+  // bot's chat stripe
+  // generating unique id for bot's message
+  const uniqueId = generateUniqueId();
+  chatContainer.innerHTML += chatStripe(true, " ", uniqueId);
+
+  chatContainer.scrollTop = chatContainer.scrollHeight; // puts a new message in view
+
+  // fetching newly created div
+  const messageDiv = document.getElementById(uniqueId);
+
+  // turning on the loader
+  loader(messageDiv)
+
+}
+
+form.addEventListener('submit', handleSubmit);
+form.addEventListener('keyup', (e) => {
+  if (e.keyCode === 13) {
+    handleSubmit(e);
+  }
+});
