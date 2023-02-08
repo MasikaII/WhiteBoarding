@@ -3,7 +3,7 @@ import React from 'react';
 
 const LoginForm = ({ isShowLogin }) => {
   return (
-    <div className={`${!isSHowLogin ? "active" : ""} show`}>
+    <div className={`${isShowLogin ? "active" : ""} show`}>
       <div className="login-form">
         <div className="form-box solid">
           <form>
