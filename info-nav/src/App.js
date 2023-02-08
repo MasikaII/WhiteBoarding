@@ -27,7 +27,7 @@ function App() {
           <Route path="login/*" element={<NavBar />} />
         </Routes>
       </BrowserRouter>
-      <NavBar></NavBar>
+      <NavBar>Please sign in</NavBar>
     </>
 
   );

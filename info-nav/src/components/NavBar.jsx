@@ -6,7 +6,7 @@ function NavBar({ handleLoginClick }) {
     handleLoginClick()
   }
   return (
-    <div className="navbar">
+    <div className="navBar">
       <div>
         <span onClick={handleClick} className="logincon">Sign In</span>
       </div>
