@@ -52,7 +52,7 @@ function chatStripe(isAI, value, uniqueId) {
     `
     <div class="wrapper ${isAI && 'AI'}">
       <div class="chat">
-        <div className="profile">
+        <div class="profile">
           <img
             src="${isAI ? bot : user}"
             alt="${isAI ? 'bot' : 'user'}"
@@ -91,6 +91,34 @@ const handleSubmit = async (e) => {
 
   // turning on the loader
   loader(messageDiv)
+
+  // fetching data from server -> bot's response
+  const response = await fetch('http://localhost:5000', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      prompt: data.get('prompt')
+    })
+  })
+
+  // clearing interval
+  clearInterval(loadInterval);
+
+  messageDiv.innerHTML = '';
+
+  if (response.ok) {
+    const data = await response.json(); // actual response from backend
+    // parsing data from backend
+    const parsedData = data.bot.trim();
+    // passing data to our typeText Function
+    typeText(messageDiv, parsedData);
+  } else {
+    const err = await response.text();
+    messageDiv.innerHTML = "Something went wrong";
+    alert(err);
+  }
 
 }
 
