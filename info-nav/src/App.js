@@ -1,4 +1,6 @@
 import Navbar from './Navbar';
+import { Login } from './components/Login';
+import { Register } from './components/Register';
 import {
   BrowserRouter,
   Routes,
@@ -16,10 +18,13 @@ function App() {
         <Home />
       </div>
     </div> */}
+
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="about/*" element={<About />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </BrowserRouter>
     </>

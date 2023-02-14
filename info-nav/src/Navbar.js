@@ -11,6 +11,7 @@ const Navbar = () => {
            <div className="links">
             <a href="/">Home</a>
             <Link to="/about">About</Link>
+            <Link to="/Login">Login</Link>
             <a href="/create" style={{
                 color:"white",
                 backgroundColor: '#f1356d',
