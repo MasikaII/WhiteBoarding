@@ -76,6 +76,15 @@
   color: white;
   margin-top: 2rem;
 }
+
+.register-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  margin-top: 2rem;
+}
 /* //diffrent screen size */
 @media screen and (min-width: 600px) {
   .auth-form-container {

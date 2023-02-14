@@ -37,7 +37,7 @@ export const Register = (props) => {
             <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
             <label htmlFor="password">password</label>
             <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
-            <button type="submit">Log In</button>
+            <div className="link-btn-login" type="submit">Register</div>
             </div>
         </form>
         {/* <button className="link-btn" onClick={() => props.onFormSwitch('login')}>Already have an account? Login here.</button> */}
@@ -46,14 +46,14 @@ export const Register = (props) => {
             marginTop:"3rem",                                                                                                                             
             textAlign:'center'   
         }}>
-                        <Link to="/login">
-                    <span style={{
-                        color:'white',
-                        textDecoration:'none',
-                        fontSize:'.8rem',
-                        textAlign:'center'
+            <Link to="/login">
+                <span style={{
+                    color:'white',
+                    textDecoration:'none',
+                    fontSize:'.8rem',
+                    textAlign:'center'
                     }}>
-                        Don't have an account? Register here.
+                     Already have an account? LogIn here.
                     </span>
                 </Link>
             </div>

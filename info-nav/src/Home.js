@@ -6,6 +6,9 @@ const Home = () => {
     const [blogs, setBlogs] = useState([
     { title: 'How I solved afids problem ', body: 'lorem ipsum...', author: 'marion', id: 1 },
     { title: '10 ways to solve you weed problems', body: 'lorem ipsum...', author: 'yoshi', id: 2 },
+    { title: 'top tips Chick rearing', body: 'lorem ipsum...', author: 'mario', id: 3},
+    { title: 'How I solved afids problem ', body: 'lorem ipsum...', author: 'marion', id: 1 },
+    { title: '10 ways to solve you weed problems', body: 'lorem ipsum...', author: 'yoshi', id: 2 },
     { title: 'top tips Chick rearing', body: 'lorem ipsum...', author: 'mario', id: 3 }
     ]);
 
